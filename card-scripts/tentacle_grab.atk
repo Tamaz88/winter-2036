@@ -1,0 +1,2 @@
+entity.applyEffect(effects["constriction"], 1, 2, infinite=False)
+t.alert(f"1 constriction was applied on {entity.name}!", clear=False)

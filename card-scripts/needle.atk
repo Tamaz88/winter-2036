@@ -1,0 +1,3 @@
+if entity.getEffect("Bleed").count:
+    entity.applyEffect(effects["bleed"], 0, 2, infinite=False)
+    t.alert(f"{entity.name}'s bleed was extended by 2!", clear=False)

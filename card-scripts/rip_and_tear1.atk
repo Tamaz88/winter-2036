@@ -1,0 +1,9 @@
+caster.deck[0] = Card("Rip...", power=4, powMod=4, chances=3, desc=[
+"> Inflict 1 fragile",
+"  for each",
+"  Electric charge in",
+"  the battle.",
+"> On hit, replace",
+"  this card with",
+"  \"Rip...\""
+], attackScripts={"onHit": "attacks/rip_and_tear2.atk", "onLose": ""}, cost=2)

@@ -1,0 +1,5 @@
+charge = 0
+for e in currentEnemies:
+    charge += e.getEffect("Electric charge").count
+entity.applyEffect(effects["shock"], charge+1, 1, infinite=True)
+t.alert(f"{charge+1} shock was applied on {entity.name}!", clear=False)

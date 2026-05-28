@@ -1,0 +1,2 @@
+caster.applyEffect(effects["force"], 5, 1, infinite=False)
+t.alert(f"5 force was applied on {caster.name}!", clear=False)

@@ -1,0 +1,2 @@
+t.alert("A sprout begins to bloom...", clear=False)
+caster.discardPile.append(deepcopy(unobtainableCards[1]))

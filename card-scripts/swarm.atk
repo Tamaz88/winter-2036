@@ -1,0 +1,3 @@
+summon("ant_swarm")
+summon("ant_swarm")
+t.alert("Ants begin to crawl out of the deer's chest...", clear=False)

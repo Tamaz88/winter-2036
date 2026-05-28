@@ -1,0 +1,7 @@
+if caster.getEffect("Spore").count > 0:
+    caster.applyEffect(effects["spore"], len(currentEnemies), 1, infinite=True)
+    t.alert(f"{len(currentEnemies)} spore was applied on {caster.name}!", clear=False)
+    t.alert(f"{caster.name} consumed 1 spore!", clear=False)
+    caster.getEffect("Spore").count -= 1
+else:
+    t.alert("You don't have enough spore to cast this attack.", clear=False)

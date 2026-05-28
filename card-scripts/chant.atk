@@ -1,0 +1,12 @@
+bonus = 0
+print()
+t.alert("\"WHOM DO WE PRAISE BROTHERS?\"", clear=False)
+print("\n")
+if len([c for c in currentEnemies if c.alive]) > 1:
+    for enemy in [c for c in currentEnemies if c.alive]:
+        t.alert("THE STARS", clear=False)
+        bonus += 2
+    print()
+    entity.damage(bonus)
+else:
+    t.alert("Nobody answered.", clear=False)

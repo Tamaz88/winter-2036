@@ -1,0 +1,2 @@
+caster.discardPile.append(deepcopy(obtainableCards[3]))
+t.alert("Gun reloaded.", clear=False)

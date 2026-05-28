@@ -1,0 +1,7 @@
+if caster.getEffect("Spore").count > 0:
+    entity.applyEffect(effects["constriction"], 1, 2)
+    t.alert(f"{1} constriction was applied on {entity.name}!", clear=False)
+    caster.getEffect("Spore").count -= 1
+    t.alert(f"{caster.name} consumed 1 spore!", clear=False)
+else:
+    t.alert("You don't have enough spore to cast this attack.", clear=False)

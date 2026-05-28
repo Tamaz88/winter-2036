@@ -1,0 +1,13 @@
+entity.applyEffect(effects["shock"], 2, 1, infinite=True)
+for _ in range(entity.getEffect("Shock").count):
+    print(t.centerText("*BASH*"))
+    sleep(0.5)
+entity.health -= (entity.getEffect("Shock").count)
+damageString = str(entity.getEffect("Shock").count)
+damageArt = []
+for i in damageString:
+    damageArt.append(art.asciiNums[i])
+print()
+t.alert(f"{entity.name} suffered {entity.getEffect("Shock").count} damage!", clear=False)
+print()
+t.alert(f"2 shock was applied on {entity.name}!", clear=False)

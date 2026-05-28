@@ -1,0 +1,4 @@
+entity.momentum -= 5
+entity.stamina -= 1
+t.alert(f"{entity.name} lost 5 momentum!", clear=False)
+t.alert(f"{entity.name} lost 1 stamina!", clear=False)

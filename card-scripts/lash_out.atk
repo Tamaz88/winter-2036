@@ -1,0 +1,6 @@
+efficiency = caster.getEffect("Spore").count
+entity.applyEffect(effects["shock"], min(efficiency+1, 5), 1, infinite=True)
+t.alert(f"{min(efficiency+1, 5)} shock was applied on {entity.name}!", clear=False)
+if efficiency > 0:
+    entity.applyEffect(effects["evil_reflex"], efficiency, 1)
+    t.alert(f"{efficiency} clumsy was applied on {entity.name}!", clear=False)

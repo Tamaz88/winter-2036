@@ -1,0 +1,7 @@
+caster.skin = art.featherfiend
+if entity.getEffect("Bleed").count > 0:
+    entity.applyEffect(effects["bleed"], 0, 2, infinite=False)
+    t.alert(f"{entity.name}'s bleed was extended by 2!", clear=False)
+else:
+    entity.applyEffect(effects["bleed"], 5, 2, infinite=False)
+    t.alert(f"5 bleed was applied on {entity.name}!", clear=False)

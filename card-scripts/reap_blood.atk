@@ -1,0 +1,6 @@
+healthSteal = randint(1, 6)
+entity.health -= healthSteal
+caster.health += healthSteal
+if caster.health>caster.maxHealth: caster.health = caster.maxHealth
+t.alert(f"{entity.name} suffered {healthSteal} additional damage!", clear=False)
+t.alert(f"{caster.name} replenished {healthSteal} HP!", clear=False)

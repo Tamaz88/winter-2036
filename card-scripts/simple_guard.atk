@@ -1,0 +1,4 @@
+currentEnemies[1].applyEffect(effects["block"], 1, 1)
+t.alert(f"1 block was applied on the Sixth sprite of Frau Holle!", clear=False)
+currentEnemies[1].applyEffect(effects["endurance"], 5, 1)
+t.alert(f"5 endurance was applied on the Sixth sprite of Frau Holle!", clear=False)

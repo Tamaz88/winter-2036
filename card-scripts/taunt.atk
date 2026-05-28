@@ -1,0 +1,2 @@
+entity.applyEffect(effects["taunted"], 1, 1, infinite=True)
+t.alert(f"1 taunted was applied on {entity.name}!", clear=False)

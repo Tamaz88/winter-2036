@@ -1,0 +1,19 @@
+system("cls")
+for i in range(500):
+    print(t.centerText("\\"+"|"*2*(4-round(i/100))+"/"))
+    sleep(0.0001)
+sleep(0.01)
+system("cls")
+print("\n"*3)
+t.alert("* C R A S H *", clear=False, sleepTime=0.1)
+print("\n"*3)
+
+if caster.getEffect("Haste").count:
+    for i in range(caster.getEffect("Haste").count):
+        caster.applyEffect(effects["shock"], 1, 1, infinite=True)
+    t.alert(f"{caster.getEffect("Haste").count} shock was applied on {caster.name}!", clear=False)
+    entity.damage(caster.getEffect("Haste").count)
+    print()
+    t.alert(f"{caster.name} loses all of their haste!", clear=False)
+    caster.effects.remove(caster.getEffect("Haste"))
+    print()

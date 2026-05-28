@@ -1,0 +1,12 @@
+system("cls")
+print("\n"*6)
+t.alert(Fore.RED+"Something still keeps pounding within me.", clear=False)
+print(Fore.RESET)
+print("\n"*3)
+if caster.getEffect("Bleed").count: caster.effects.remove(caster.getEffect("Bleed"))
+caster.health = max(caster.health, round(caster.maxHealth/2))
+caster.applyEffect(effects["shock"], 5, 1, infinite=True)
+t.alert(f"All bleed was removed from {caster.name}!", clear=False)
+if caster.health < round(caster.maxHealth/2):
+    t.alert(f"{caster.name} was healed back to half health!", clear=False)
+t.alert(f"5 shock was applied on {caster.name}!", clear=False)

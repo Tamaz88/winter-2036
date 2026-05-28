@@ -1,0 +1,9 @@
+entity.applyEffect(effects["shock"], 4, 1, infinite=True)
+t.alert(f"4 shock was applied on {entity.name}!", clear=False)
+if len(caster.hand)>1 or caster.hand[0].name!="Pass":
+    discardedCard = choice(caster.hand)
+    while discardedCard.name == "Pass":
+        discardedCard = choice(caster.hand)
+    caster.discardPile.append(discardedCard)
+    caster.hand.remove(discardedCard)
+    t.alert(f"Discarded \"{discardedCard.name}\"!", clear=False)

@@ -1,0 +1,3 @@
+if entity.plannedAttacks[0].power>0 and not entity.plannedAttacks[0].isDefensive:
+    entity.applyEffect(effects["evil_reflex"], 2, 1, infinite=False)
+    t.alert(f"2 clumsy was applied on {entity.name}!", clear=False)

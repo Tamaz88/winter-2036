@@ -1,0 +1,2 @@
+caster.applyEffect(effects["reflex"], 1, 1)
+t.alert(f"1 reflex was applied on {caster.name}!", clear=False)

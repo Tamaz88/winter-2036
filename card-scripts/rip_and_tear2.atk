@@ -1,0 +1,10 @@
+charge = 0
+for e in currentEnemies:
+    charge += e.getEffect("Electric charge").count
+entity.applyEffect(effects["fragile"], charge, 2, infinite=False)
+if charge: t.alert(f"{charge} fragile was applied on {entity.name}!", clear=False)
+caster.deck[0] = Card("Rip...", power=6, powMod=4, chances=2, desc=[
+    "> On hit, replace",
+    "  this card with",
+    "  \"...and tear\""
+], attackScripts={"onHit": "attacks/rip_and_tear1.atk", "onLose": ""})

@@ -1,0 +1,2 @@
+caster.stamina = min(caster.maxStamina, caster.stamina+1)
+t.alert(f"{caster.name} replenished 1 stamina!", clear=False)

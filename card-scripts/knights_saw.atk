@@ -1,0 +1,5 @@
+charge = 1
+for e in currentEnemies:
+    charge += e.getEffect("Electric charge").count
+entity.applyEffect(effects["fragile"], charge, 2, infinite=False)
+if charge: t.alert(f"{charge} fragile was applied on {entity.name}!", clear=False)

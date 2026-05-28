@@ -1,0 +1,2 @@
+caster.applyEffect(effects["endurance"], 2, 1, infinite=False)
+t.alert(f"2 endurance was applied on {caster.name}!", clear=False)

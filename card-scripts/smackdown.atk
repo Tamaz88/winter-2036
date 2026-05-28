@@ -1,0 +1,4 @@
+entity.applyEffect(effects["shock"], 4, 1, infinite=True)
+caster.applyEffect(effects["block"], 1, 2, infinite=False)
+t.alert(f"4 shock was applied on {entity.name}!", clear=False)
+t.alert(f"1 block was applied on {caster.name}!", clear=False)

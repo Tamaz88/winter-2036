@@ -1,0 +1,4 @@
+caster.applyEffect(effects["bravery"], 5, 1, infinite=True)
+t.alert(f"5 bravery was applied on {caster.name}!", clear=False)
+entity.applyEffect(effects["evil_reflex"], 1, 2, infinite=False)
+t.alert(f"1 clumsy was applied on {entity.name}!", clear=False)

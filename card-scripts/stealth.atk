@@ -1,0 +1,5 @@
+caster.applyEffect(effects["force"], 3, 2, infinite=False)
+t.alert(f"3 force was applied on {caster.name}!", clear=False)
+caster.applyEffect(effects["endurance"], 3, 2, infinite=False)
+t.alert(f"3 endurance was applied on {caster.name}!", clear=False)
+caster.skin = art.featherfiend_cloaked

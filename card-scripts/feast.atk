@@ -1,0 +1,21 @@
+system("cls")
+print("\n"*6)
+print(Fore.RED)
+t.alert("Let's have a taste.", clear=False, sleepTime=0.05)
+print(Fore.RESET)
+print("\n"*3)
+i = 0
+while entity.getEffect("Bleed").duration > 0 and i < 3:
+    healthSteal = randint(1, 4)
+    entity.health -= healthSteal
+    caster.health = min(caster.maxHealth, caster.health+healthSteal)
+    t.alert(f"{entity.name} suffered {healthSteal} additional damage!", sleepTime=0.001, clear=False)
+    t.alert(f"{caster.name} replenished {healthSteal} HP!", sleepTime=0.001, clear=False)
+    print()
+    entity.getEffect("Bleed").duration -= 1
+    if entity.getEffect("Bleed").duration > 0: 
+        print(Fore.RED)
+        t.alert("More...", clear=False)
+        print(Fore.RESET)
+    print("\n")
+    i += 1

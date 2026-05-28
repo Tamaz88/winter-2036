@@ -1,0 +1,2 @@
+entity.health -= floor(len(entity.deck)/2)
+t.alert(f"{entity.name} suffered {floor(len(entity.deck)/2)} additional damage!", clear=False)

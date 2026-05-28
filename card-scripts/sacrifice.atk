@@ -1,0 +1,13 @@
+sacrifices = [e for e in currentEnemies if e.alive]
+if len(sacrifices) > 1:
+    t.alert("\"YIELD YOUR BLOOD TO THE STARS MY CHILD!\"", clear=False)
+    sacrifices[sacrifices.index(caster)-1].health = 0
+    t.alert(f"{sacrifices[sacrifices.index(caster)-1].name} died.", clear=False)
+    caster.applyEffect(effects["frenzy"], 10, 1, infinite=True)
+    t.alert(f"{caster.name} gained 10 Frenzy!", clear=False)
+else:
+    t.alert("\"MAY MY BLOOD FLOW FOR A BETTER FUTURE!\"", clear=False)
+    caster.applyEffect(effects["bleed"], 3, 1, infinite=True)
+    t.alert(f"{caster.name} gained 3 bleed!", clear=False)
+    caster.applyEffect(effects["frenzy"], 5, 1, infinite=True)
+    t.alert(f"{caster.name} gained 5 Frenzy!", clear=False)

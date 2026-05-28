@@ -1,0 +1,2 @@
+entity.applyEffect(effects["fragile"], 2, 2, infinite=False)
+t.alert(f"2 fragile was applied on {entity.name}!", clear=False)

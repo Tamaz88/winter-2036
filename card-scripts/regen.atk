@@ -1,0 +1,2 @@
+caster.health = min(caster.health+(caster.getEffect("Spore").count)+3, caster.maxHealth)
+t.alert(f"{caster.name} healed {(caster.getEffect("Spore").count)+3} HP!", clear=False)

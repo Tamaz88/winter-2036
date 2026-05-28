@@ -1,0 +1,3 @@
+healAmount = round(caster.maxHealth/5)
+caster.health += healAmount
+if caster.health>caster.maxHealth: caster.health = caster.maxHealth

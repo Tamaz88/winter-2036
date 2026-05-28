@@ -1,0 +1,9 @@
+entity.applyEffect(effects["bleed"], 1, 1)
+entity.applyEffect(effects["fragile"], 1, 2)
+if entity.getEffect("Bleed").count>0:
+    for i in range(entity.getEffect("Bleed").count-1):
+        entity.applyEffect(effects["fragile"], 1, 0)
+        if i == 2: break
+t.alert(f"{entity.getEffect("Bleed").count} fragile was applied on {entity.name}!", clear=False)
+print()
+t.alert(f"1 bleed was applied on {entity.name}!", clear=False)

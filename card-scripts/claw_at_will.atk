@@ -1,0 +1,4 @@
+entity.applyEffect(effects["bleed"], 1, 1, infinite=False)
+t.alert(f"1 bleed was applied on {entity.name}!", clear=False)
+entity.applyEffect(effects["fragile"], 2, 2, infinite=False)
+t.alert(f"2 fragile was applied on {entity.name}!", clear=False)

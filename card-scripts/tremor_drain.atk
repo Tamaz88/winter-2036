@@ -1,0 +1,1 @@
+currentEnemies[1].getEffect("Shock").count -= 2

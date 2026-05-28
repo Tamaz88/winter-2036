@@ -1,0 +1,2 @@
+entity.applyEffect(effects["shock"], 2, 1, infinite=True)
+t.alert(f"2 shock was applied on {entity.name}!", clear=False)

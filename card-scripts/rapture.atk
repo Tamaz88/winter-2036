@@ -1,0 +1,30 @@
+#prayerWords = [
+#    "God",
+#    "Father",
+#    "rejoice",
+#    "come",
+#    "bless",
+#    "praise",
+#    "the Lord"
+#]
+system("cls")
+print("\n"*6)
+print(Fore.RED)
+#for _ in range(3):
+#    cString = choice(prayerWords)
+#    for __ in range(randint(2, 5)):
+#        cString += " "*randint(5, 10)+choice(prayerWords)
+#    t.alert(cString, sleepTime=0.002, clear=False)
+#    print()
+t.alert("REJOICE! REJOICE! REJOICE!", clear=False, sleepTime=0.05)
+print()
+#for _ in range(3):
+#    cString = choice(prayerWords)
+#    for __ in range(randint(2, 5)):
+#        cString += " "*randint(5, 10)+choice(prayerWords)
+#    t.alert(cString, sleepTime=0.002, clear=False)
+#    print()
+print(Fore.RESET)
+print("\n"*3)
+entity.applyEffect(effects["madness"], 1, 1, infinite=True)
+t.alert(f"Madness was applied on {entity.name}!", clear=False)

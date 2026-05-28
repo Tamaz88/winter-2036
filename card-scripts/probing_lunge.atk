@@ -1,0 +1,2 @@
+caster.applyEffect(effects["focus"], 10, 1, infinite=False)
+t.alert(f"10 focus was applied on {caster.name}!", clear=False)

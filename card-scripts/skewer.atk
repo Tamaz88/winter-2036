@@ -1,0 +1,4 @@
+entity.applyEffect(effects["bleed"], 1, 2, infinite=False)
+t.alert(f"1 bleed was applied on {entity.name}!", clear=False)
+entity.health -= 5
+t.alert(f"{entity.name} suffered 5 additional damage!", clear=False)

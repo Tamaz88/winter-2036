@@ -1,0 +1,2 @@
+caster.applyEffect(effects["spore"], 1, 1, infinite=True)
+t.alert(f"1 spore was applied on {caster.name}!", clear=False)

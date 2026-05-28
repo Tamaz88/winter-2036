@@ -1,0 +1,5 @@
+charge = 1
+for e in currentEnemies:
+    charge += e.getEffect("Electric charge").count
+entity.applyEffect(effects["burn"], charge, 1, infinite=True)
+if charge: t.alert(f"{charge} burn was applied on {entity.name}!", clear=False)

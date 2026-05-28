@@ -1,0 +1,2 @@
+t.alert("New branches begin to sprout...", clear=False)
+caster.discardPile.append(deepcopy(unobtainableCards[0]))

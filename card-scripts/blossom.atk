@@ -1,0 +1,10 @@
+system("cls")
+print("\n"*6)
+print(Fore.RED)
+t.alert(sleepTime=0.1, e="I  H u n g e r . . .", clear=False)
+print(Fore.RESET)
+print("\n"*3)
+entity.health -= 10
+print(t.centerText(f"{entity.name} suffered"))
+t.printAsciiArt(t.connectAsciiArt([art.asciiNums["1"], art.asciiNums["0"]]))
+print(t.centerText(f"additional damage!"))

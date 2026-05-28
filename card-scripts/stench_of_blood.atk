@@ -1,0 +1,7 @@
+if entity.getEffect("Bleed").count:
+    self.tempPower += 3
+    t.alert(f"{caster.name} gained 3 power!", clear=False)
+    caster.stamina = min(caster.maxStamina, caster.stamina+1)
+    t.alert(f"{caster.name} replenished 1 stamina!", clear=False)
+else:
+    t.alert(f"{caster.name} cannot smell your blood just yet.", clear=False)

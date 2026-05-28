@@ -1,0 +1,5 @@
+caster.applyEffect(effects["haste"], 3, 1, infinite=True)
+t.alert(f"{caster.name} gained 3 Haste!", clear=False)
+
+self.tempPower += min(caster.getEffect("Haste").count, 5)
+t.alert(f"{caster.name} gained {min(caster.getEffect("Haste").count, 5)} power!", clear=False)

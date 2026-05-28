@@ -1,0 +1,13 @@
+nums = ["ONCE", "TWICE", "THRICE"]
+bonus = 0
+print()
+print("\n")
+if floor((caster.maxHealth-caster.health)/15) > 0:
+    t.alert("\"You have desecrated me...\"", clear=False)
+    for i in range(floor((caster.maxHealth-caster.health)/15)):
+        t.alert(nums[i], clear=False)
+        bonus += 5
+    print()
+    entity.damage(bonus)
+else:
+    pass

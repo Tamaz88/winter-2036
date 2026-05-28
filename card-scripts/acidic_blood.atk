@@ -1,0 +1,3 @@
+if caster.getEffect("Bleed").count > 0:
+    entity.applyEffect(effects["acid"], caster.getEffect("Bleed").count, 1, infinite=True)
+    t.alert(f"{caster.getEffect("Bleed").count} acid was applied on {entity.name}!", clear=False)

@@ -1,0 +1,2 @@
+entity.applyEffect(effects["acid"], 3, 1, infinite=True)
+t.alert(f"3 acid was applied on {entity.name}!", clear=False)

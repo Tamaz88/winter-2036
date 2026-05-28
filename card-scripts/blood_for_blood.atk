@@ -1,0 +1,4 @@
+caster.applyEffect(effects["bleed"], 2, 2, infinite=False)
+t.alert(f"2 bleed was applied on {caster.name}!", clear=False)
+entity.applyEffect(effects["bleed"], 4, 2, infinite=False)
+t.alert(f"4 bleed was applied on {entity.name}!", clear=False)

@@ -1,0 +1,4 @@
+caster.applyEffect(effects["block"], 3, 1)
+t.alert(f"3 block was applied on {caster.name}!", clear=False)
+caster.applyEffect(effects["endurance"], 3, 1)
+t.alert(f"3 endurance was applied on {caster.name}!", clear=False)

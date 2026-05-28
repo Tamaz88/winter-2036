@@ -1,0 +1,24 @@
+system("cls")
+print("\n"*6)
+t.alert(Fore.RED+"And the noise kept getting louder...", clear=False)
+print(Fore.RESET)
+print("\n"*3)
+entity.applyEffect(effects["shock"], 2, 1, infinite=True)
+for _ in range(entity.getEffect("Shock").count):
+    print(t.centerText("\"ENOUGH!\""))
+    sleep(0.5)
+entity.health -= (entity.getEffect("Shock").count*2)
+damageString = str(entity.getEffect("Shock").count*2)
+damageArt = []
+for i in damageString:
+    damageArt.append(art.asciiNums[i])
+print("\n"*3)
+print(t.centerText(f"Damage dealt to {entity.name}:"))
+print()
+t.printAsciiArt(t.connectAsciiArt(damageArt, p=2))
+print()
+t.alert(f"2 shock was applied on {entity.name}!", clear=False)
+caster.health -= 5
+t.alert(f"{caster.name} suffered 5 damage!", clear=False)
+
+# t.alert(f"{entity.name} suffered {entity.getEffect("Shock").count*2} damage!", clear=False)
