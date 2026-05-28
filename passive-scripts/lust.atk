@@ -1,0 +1,10 @@
+if "bleed" in entity.plannedAttacks[0].getType():
+    if entity.getEffect("Lust for blood").count < 3:
+        entity.applyEffect(effects["bloodlust"], 1, 1, infinite=True)
+        t.alert(f"[{self.name.upper()}] {entity.name}'s bloodlust stack increased by 1!", clear=False)
+    else:
+        pass
+else:
+    if entity.getEffect("Lust for blood").count > 0:
+        entity.effects.remove(entity.getEffect("Lust for blood"))
+        t.alert(f"[{self.name.upper()}] {entity.name}'s desire for blood is left unsated.", clear=False)

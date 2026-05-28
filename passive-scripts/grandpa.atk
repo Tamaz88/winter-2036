@@ -1,0 +1,10 @@
+choices = [e for e in currentEnemies if e.alive]
+if len(choices):
+    if self.clock%2 == 0:
+        t.alert(f"[{self.name.upper()}] *groans*")
+        target = choice(choices)
+        target.damage(randint(2, 10))
+        target.applyEffect(effects["fragile"], 1, 1, infinite=True)
+        t.alert(f"{target.name} gained 1 Fragile!", clear=False)
+    else:
+        t.alert(f"[{self.name.upper()}] *loads*")

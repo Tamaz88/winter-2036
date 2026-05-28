@@ -1,0 +1,65 @@
+Entity(name="Starving man", maxHP=50, DEF=2, deck=[
+        Card(name="Stench of blood", power=2, chances=4, powMod=2, attackScripts={"onClash": "card-scripts/stench_of_blood.atk"}, desc=[
+            "\"Will this one give",
+            "me statisfaction?\"",
+            "",
+            "On clash:",
+            "> If the target has",
+            "  bleed, gain 3",
+            "  power and replenish",
+            "  1 stamina.",
+        ], cost=1),
+        Card(name="Pursue", power=0, chances=2, powMod=10, isDefensive=True, attackScripts={"onHit": "card-scripts/prepare_charge.atk"}, desc=[
+            "> Gain +5 ATK for",
+            "  this turn."
+        ], cost=0),
+        Card(name="Mutilate", power=5, chances=4, powMod=3, attackScripts={"onClash": "card-scripts/sawtooth.atk", "onHit": "card-scripts/needle.atk"}, desc=[
+            "On clash:",
+            "> Inflict 3",
+            "  bleed.",
+            "",
+            "On hit:",
+            "> If target",
+            "  has bleed,",
+            "  increasse",
+            "  its duration",
+            "  by 2.",
+        ], cost=2),
+        Card(name="Feast", power=4, chances=4, powMod=4, rarity=1, attackScripts={"onHit": "card-scripts/feast.atk"}, desc=[
+            "\"This is simply",
+            "not enough.\"",
+            "",
+            "> If the target",
+            "  has bleed, reduce",
+            "  the duration by 1,",
+            "  and deal (1-4)",
+            "  damage.",
+            "  Heal by the damage",
+            "  dealt this way.",
+            "> Repeat until the",
+            "  bleed duration",
+            "  of the target",
+            "  reaches 0",
+            "  (max 3 times).",
+        ], cost=3),
+    ], AGT=-2, DEX=50, passives=[
+        Passive(name="Unsated hunger", callingOrder=1, desc=[
+            "Whenever this unit fails a clash with an offensive card, gain 1 hunger.",
+            "",
+            "Hunger:",
+            "Enchances ATK by the effect's count.",
+            "Upon reaching 5 Hunger, become shocked and lose 10 HP at turn start.",
+        ], effectScript="passive-scripts/unsated_hunger.atk"),
+    ], description=[
+        "Radiation kills many, but life eventually finds a way.",
+        "The ashes that once made the beasts of this realm wither away",
+        "now grant them an amount of strength that is barely comparable",
+        "to those that the old world's animals used to wield.",
+        "",
+        "",
+    ], skin=art.starvation, attackSlots=3, pattern=[
+        Pattern([1, 0, 0], "self.clock == 1"),
+        Pattern([1, 2, 0], "self.clock == 2"),
+        Pattern([0, 2, 3], "self.clock == 0"),
+    ]
+)

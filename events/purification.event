@@ -1,0 +1,26 @@
+print("\n")
+inEvent=True
+while inEvent:
+    inEvent = False
+    match t.centeredInput("Do you help the mutant escape? [Y/N] ").lower().replace(" ", ""):
+        case "y":
+            print("\n")
+            t.alert("You charge at the medic recklessly.", clear=False) 
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+            gainedRadiation += battle(player, [getEntity(enemies["purist_medic"])], canRestart=False, radiation=3)
+            if player.alive:
+                print("\n")
+                t.alert("You search the belongings of the fallen medic and find a few syringes.", clear=False) 
+                t.alert("You'll start the next encounter with +10 HP!", clear=False)
+                player.health = player.maxHealth + 10
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case "n":
+            print("\n")
+            t.alert("You don't have time for this bullshit.", clear=False)
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case _:
+            inEvent=True
+            t.refresh()

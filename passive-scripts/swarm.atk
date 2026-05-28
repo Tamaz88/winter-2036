@@ -1,0 +1,2 @@
+entity.health -= 2
+t.alert(f"{entity.name} is dispersing. It took 2 damage.", clear=False)

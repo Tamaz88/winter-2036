@@ -1,0 +1,5 @@
+targets = [e for e in currentEnemies if e.alive]
+t.alert(f"[{self.name.upper()}] you yearn to become like all of them.")
+for target in targets:
+    target.applyEffect(effects["constriction"], 1, 3, infinite=False)
+    t.alert(f"{target.name} gained 1 Constriction!", clear=False)

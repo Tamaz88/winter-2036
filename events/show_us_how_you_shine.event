@@ -1,0 +1,21 @@
+print("\n")
+if not len([c for c in player.deck if c.name == "Bioluminescence"]) > 0:
+    gainedRadiation += battle(player, [getEntity(enemies["stellar_priest"]),getEntity(enemies["stellar_priest"]),getEntity(enemies["stellar_priest"])], canRestart=False, radiation=9)
+    if player.health>0:
+        print("\n")
+        t.alert("That was... strange for sure.", clear=False)
+        print("\n")
+        t.centeredInput("Continue [ENTER] ")
+else:
+    print("\n")
+    t.alert("Could they be talking about your bioluminescencent gland?", clear=False)
+    t.alert("Deciding that it's better than dying, you flash your gland.", clear=False)
+    t.alert("\"KNEEL BEFORE THE STAR!\"", clear=False)
+    t.alert("They start to bow and kneel at your feet. The sight is a bit shocking, but it fills you with a sense of pride.", clear=False)
+    print()
+    t.alert("You've gained +1 ATK for this skirmish.", clear=False)
+    player.passives.append(Passive(name="Blessing of the stars", desc=[
+        "Gain +1 ATK for this encounter."
+    ], effectScript="passives/blessing_of_the_stars.atk", callingOrder=4, skirmishModifier=True))
+    print("\n")
+    t.centeredInput("Continue [ENTER] ")

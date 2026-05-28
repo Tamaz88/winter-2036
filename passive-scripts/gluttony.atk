@@ -1,0 +1,4 @@
+if not entity.plannedAttacks[0].isDefensive and randint(1, 4) == 1:
+    heal = randint(1, 4)
+    entity.health = min(entity.maxHealth, entity.health+heal)
+    t.alert(f"[{self.name.upper()}] {entity.name} healed {heal} HP!", clear=False)

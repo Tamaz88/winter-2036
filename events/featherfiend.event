@@ -1,0 +1,33 @@
+print("\n")
+inEvent=True
+while inEvent:
+    inEvent = False
+    match t.centeredInput("Do you approach the stranger? [Y/N] ").lower().replace(" ", ""):
+        case "y":
+            print("\n")
+            if randint(0, 1):
+                gainedRadiation += battle(player, [getEntity(enemies["featherfiend"])], canRestart=False, radiation=9)
+                if player.health>0:
+                    print("\n")
+                    t.alert("Impressive mimicry, truly.", clear=False)
+                    print("\n")
+                    t.centeredInput("Continue [ENTER] ")
+            else:
+                print("\n")
+                t.alert("Nevermind, it is merely a corpse animated by the strong breeze.", clear=False)
+                t.alert("Its bags of equipment do come as a significant aid, however.", clear=False)
+                print("\n")
+                t.alert("You've gained +1 ATK for this skirmish.", clear=False)
+                player.passives.append(Passive(name="Hone stone", desc=[
+                    "Gain +1 ATK for this encounter."
+                ], effectScript="passives/blessing_of_the_stars.atk", callingOrder=4, skirmishModifier=True))
+                print("\n")
+                t.centeredInput("Continue [ENTER] ")
+        case "n":
+            print("\n")
+            t.alert("You do not want to risk your life for something this uncertain.", clear=False)
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case _:
+            inEvent=True
+            t.refresh()

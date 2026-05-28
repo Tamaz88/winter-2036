@@ -1,0 +1,29 @@
+print("\n")
+inEvent=True
+while inEvent:
+    inEvent = False
+    match t.centeredInput("Will you accept the challange? [Y/N] ").lower().replace(" ", ""):
+        case "y":
+            print("\n")
+            t.alert("Very well. As you stand still, the wolf leaps at you fiercefully.", clear=False)
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+            gainedRadiation += battle(player, [getEntity(enemies["alpha_raywolf"])], canRestart=False, radiation=10)
+            if player.alive:
+                print("\n")
+                t.alert("The other wolves howl at the sight of their defeated leader.", clear=False)
+                t.alert("You've gained +10 DEX for this skirmish.", clear=False)
+                player.passives.append(Passive(name="Bravery", desc=[
+                    "Gain +10 DEX for this encounter."
+                ], effectScript="passives/bravery.atk", callingOrder=4, skirmishModifier=True))
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case "n":
+            print("\n")
+            t.alert("You flee while you can.", clear=False)
+            t.alert("Some may call this cowardice, you call this common sense.", clear=False)
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case _:
+            inEvent=True
+            t.refresh()

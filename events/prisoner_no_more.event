@@ -1,0 +1,7 @@
+print("\n")
+gainedRadiation += battle(player, [getEntity(enemies["halfblood"])], canRestart=False, radiation=10)
+if player.alive:
+    print("\n")
+    t.alert("You're amazed how they were able to contain that thing in the first place.", clear=False)
+    print("\n")
+    t.centeredInput("Continue [ENTER] ")

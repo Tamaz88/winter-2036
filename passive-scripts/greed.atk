@@ -1,0 +1,2 @@
+entity.momentum += 1
+t.alert(f"[{self.name.upper()}] {entity.name} gained 1 extra momentum", false)

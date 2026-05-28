@@ -1,0 +1,2 @@
+target.health -= 5
+t.alert(f"[{self.name.upper()}] {target.name} suffered 5 additional damage!", clear=False)

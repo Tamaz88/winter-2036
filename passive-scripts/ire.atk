@@ -1,0 +1,3 @@
+if entity.health < entity.maxHealth/2:
+    target.health -= 3
+    t.alert(f"[{self.name.upper()}] {target.name} suffered 3 additional damage!", clear=False)

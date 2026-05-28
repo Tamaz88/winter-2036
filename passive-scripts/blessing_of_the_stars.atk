@@ -1,0 +1,2 @@
+entity.applyEffect(effects["blessing"], 1, 1, infinite=True)
+t.alert(f"[{self.name.upper()}] {entity.name} gained 1 Blessing!", clear=False)

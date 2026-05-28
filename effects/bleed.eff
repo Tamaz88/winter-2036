@@ -1,0 +1,4 @@
+if not entity.plannedAttacks[0].isDefensive:
+    entity.health -= self.count
+    t.alert(f"{entity.name} suffered {self.count} damage from bleeding!", clear=False)
+    self.count -= 1

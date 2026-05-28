@@ -1,0 +1,3 @@
+entity.health -= self.count
+t.alert(f"{entity.name} suffered {self.count} damage from acid!", clear=False)
+self.count -= 1

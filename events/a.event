@@ -1,0 +1,18 @@
+print("\n")
+inEvent=True
+while inEvent:
+    inEvent = False
+    match t.centeredInput("Question [Y/N] ").lower().replace(" ", ""):
+        case "y":
+            print("\n")
+            pass
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case "n":
+            print("\n")
+            pass
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case _:
+            inEvent=True
+            t.refresh()

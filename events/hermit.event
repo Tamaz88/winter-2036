@@ -1,0 +1,28 @@
+print("\n")
+inEvent=True
+while inEvent:
+    inEvent = False
+    match t.centeredInput("Do you cooperate with the old man? [Y/N] ").lower().replace(" ", ""):
+        case "y":
+            print("\n")
+            t.alert("You decide that it is not worth your time to butcher all of the armed soliders in the camp.", clear=False) 
+            t.alert("The man hands over a generator and a dose of decay tonic.", clear=False)
+            t.alert("\"Now run, before they arrive. You have a heart of gold lass, don't get yourself killed.\"", clear=False)
+            print()
+            t.alert("Your skirmish ends, but you get to keep the rewards that the old man gives you.", clear=False)
+            player.alive = False
+            player.health = 0
+            player.decayTonic += 1
+            player.deck.append(deepcopy(obtainableCards[31]))
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case "n":
+            print("\n")
+            t.alert("You kill the old man mercilessly.", clear=False)
+            t.alert("He dies silently, but his face looks rather disappointed.", clear=False)
+            t.alert("As if he was telling you that \"You are not a good person, and I'm sure you know that too\".", clear=False)
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case _:
+            inEvent=True
+            t.refresh()

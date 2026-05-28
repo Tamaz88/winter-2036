@@ -1,0 +1,5 @@
+if self.count >= 5:
+    entity.health -= 10
+    entity.effects.remove(entity.getEffect("Hunger"))
+    entity.applyEffect(effects["shock"], 10, 1, infinite=True)
+    t.alert(f"{entity} is starving.")

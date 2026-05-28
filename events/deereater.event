@@ -1,0 +1,26 @@
+print("\n")
+inEvent=True
+while inEvent:
+    inEvent = False
+    match t.centeredInput("Will you feast on the carcass? [Y/N] ").lower().replace(" ", ""):
+        case "y":
+            print("\n")
+            t.alert("\"Good! Feast on my flesh some more!\"", clear=False) 
+            t.alert("With each bite taken, you start to feel more and more sick.", clear=False)
+            gainedRadiation += 10
+            t.alert(f"{player.name} gained 10 radiation!", clear=False)
+            t.alert(f"{player.name}'s AGT is reduced by one for this skirmish!", clear=False)
+            player.passives.append(Passive(name="Sickness", desc=[
+                "Lose 1 AGT for this encounter."
+            ], effectScript="passives/sickness.atk", callingOrder=4, skirmishModifier=True))
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case "n":
+            print("\n")
+            t.alert("\"Fool! Fool! FOOL!\"", clear=False)
+            t.alert("She says, yet her voice is heard no more.", clear=False)
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case _:
+            inEvent=True
+            t.refresh()

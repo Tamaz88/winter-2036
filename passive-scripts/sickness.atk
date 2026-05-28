@@ -1,0 +1,2 @@
+entity.applyEffect(effects["sickness"], 1, 1, infinite=True)
+t.alert(f"[{self.name.upper()}] {entity.name} gained 1 Sickness!", clear=False)

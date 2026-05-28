@@ -1,0 +1,47 @@
+print("\n")
+inEvent=True
+print(t.centerText("[1] You are a bunch of lunatics. Grow up already.  "))
+print(t.centerText("[2] The power of the stars are still with you, even"))
+print(t.centerText("    if their light is not.                         "))
+print(t.centerText("[3] That is true. You must repent.                 "))
+print("\n")
+while inEvent:
+    inEvent = False
+    match t.centeredInput("Pick an option [NUM] ").lower().replace(" ", ""):
+        case "1":
+            print("\n") 
+            t.alert("She starts crying, and not long after she leaps at you, weapon in hand.", clear=False)  
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+            gainedRadiation += battle(player, [getEntity(enemies["disheartened_stellar_priestess"])], canRestart=False, radiation=5)
+            if player.alive and player.health>0:
+                print("\n")
+                t.alert("\"What an idiot.\" you think to yourself.", clear=False)
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case "2":
+            print("\n")
+            t.alert("\"You- you think so?\" she wipes her tears.", clear=False)
+            print()
+            t.alert("\"Yes. You have no reason to cry.\" even if you don't believe in what you say, you don't want to hurt her.", clear=False)
+            print()
+            t.alert("\"Your words are kind, sister. May my blessing aid you\"", clear=False)
+            t.alert("She lays a kiss on your forehead.", clear=False)
+            print()
+            t.alert("You feel empowered by her kind gesture. You've gained +1 ATK for this skirmish.", clear=False)
+            player.passives.append(Passive(name="Blessing of the stars", desc=[
+                "Gain +1 ATK for this encounter."
+            ], effectScript="passives/blessing_of_the_stars.atk", callingOrder=4, skirmishModifier=True))
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case "3":
+            print("\n")
+            t.alert("\"Is that so... then must I...\"", clear=False)
+            t.alert("In despair, she stabs herself in the stomach.", clear=False)
+            print()
+            t.alert("A gruesome sight to see.", clear=False)
+            print("\n")
+            t.centeredInput("Continue [ENTER] ")
+        case _:
+            inEvent=True
+            t.refresh()

@@ -1,0 +1,3 @@
+if entity.getEffect("Haste").count < 5:
+    entity.applyEffect(effects["haste"], 1, 1, infinite=True)
+    t.alert(f"[{self.name.upper()}] {entity.name} gained 1 Haste!", clear=False)

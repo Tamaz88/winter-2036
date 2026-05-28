@@ -1,0 +1,3 @@
+if "shock" in entity.plannedAttacks[0].getType():
+    target.applyEffect(effects["evil_reflex"], 1, 0, infinite=True)
+    t.alert(f"[{self.name.upper()}] {target.name} gained 1 Clumsy!", clear=False)

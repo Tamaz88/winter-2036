@@ -1,0 +1,7 @@
+print("\n")
+gainedRadiation += battle(player, [getEntity(enemies["rayelk"]), getEntity(enemies["listening_deer"]), getEntity(enemies["rayelk"])], canRestart=False)
+if player.alive:
+    print("\n")
+    t.alert("Killing the doe was nothing short from an act of mercy.", clear=False)
+    print("\n")
+    t.centeredInput("Continue [ENTER] ")

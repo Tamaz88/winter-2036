@@ -1,0 +1,2 @@
+entity.applyEffect(effects["focus"], 10, 1)
+t.alert(f"[{self.name.upper()}] {entity.name} gained 10 Focus!", clear=False)
