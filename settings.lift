@@ -1,0 +1,3 @@
+settings_auto_check::True;
+settings_old_mutation::False;
+settings_compressed::False;
