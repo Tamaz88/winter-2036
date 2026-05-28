@@ -1,0 +1,26 @@
+Card(name="The Listener's antennae", power=6, chances=2, powMod=6, desc=[
+    "His cries still",
+    "haunt you. He's",
+    "grateful for",
+    "his death.",
+    "",
+    "> Deal 5 damage to",
+    "  self.",
+    "> Inflict 2 shock",
+    "  on target.",
+    "> Deals 2 damage for",
+    "  the target's shock",
+    "  count."
+], attackScripts={"onHit": "card-scripts/listener_antennae.atk"}, rarity=1, cost=5, forcedThought=[
+    "This world is a river.",
+    "Its currents do not",
+    "please me.",
+    "I wish I could sink so",
+    "that no raging flows may",
+    "push me around.",
+    "I do not want to take",
+    "any part in its frenzy.",
+    "I want rest.",
+    "I want everlasting and",
+    "sweet dreams.",
+])
